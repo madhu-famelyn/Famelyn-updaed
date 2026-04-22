@@ -1,0 +1,110 @@
+/* IMPORT POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* HEADER */
+.famelyn-header {
+  width: 100%;
+  padding: 20px 40px;
+  background: #001F3F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CONTAINER */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LOGO LINK */
+.logo-link {
+  text-decoration: none;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #F9F7F2;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* GOLD DOT */
+.logo-dot {
+  color: #C5A059;
+  margin-left: 1px;
+  font-weight: 700;
+}
+
+/* NAVIGATION */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+/* NAV ITEM */
+.nav-item {
+  text-decoration: none;
+  color: #E8D5B7;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.nav-item:hover {
+  color: #C5A059;
+}
+
+/* BUTTON */
+.consultation-btn {
+  border: 1px solid #C5A059;
+  padding: 10px 20px;
+  background: transparent;
+  margin-right: 8px;
+  color: #E8D5B7;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.consultation-btn:hover {
+  background: #C5A059;
+  color: #001F3F;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .famelyn-header {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none; /* hide menu on mobile for now */
+  }
+
+  .consultation-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}

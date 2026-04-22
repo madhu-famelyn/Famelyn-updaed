@@ -1,0 +1,98 @@
+/* MAIN CONTAINER */
+.roadmap-container {
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: #e8e2d8;
+  color: #0b2540;
+}
+
+/* TOP SECTION */
+.roadmap-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 100px;
+}
+
+/* LEFT */
+.left-section {
+  width: 40%;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #c9a96e;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+/* RIGHT */
+.right-section {
+  width: 50%;
+}
+
+.item {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.number {
+  font-size: 36px;
+  color: #c9a96e;
+  font-weight: 500;
+  min-width: 50px;
+}
+
+.item h3 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.item p {
+  font-size: 16px;
+  color: #4a5a6a;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #d3cbbf;
+  margin: 30px 0;
+}
+
+/* BOTTOM SECTION */
+.roadmap-bottom {
+  border-top: 1px solid #d3cbbf;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadmap-bottom h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.back-btn {
+  padding: 12px 24px;
+  border: 1px solid #c9a96e;
+  background: transparent;
+  color: #c9a96e;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #c9a96e;
+  color: white;
+}

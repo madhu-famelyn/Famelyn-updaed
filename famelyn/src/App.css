@@ -1,0 +1,5 @@
+/* GLOBAL FONT RESET */
+html, body, * {
+  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 
+               'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}

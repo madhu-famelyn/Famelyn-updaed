@@ -1,0 +1,118 @@
+.high-performing-section {
+  background-color: var(--marble, #f5f3ed);
+  padding: 100px 24px;
+  width: 100%;
+}
+
+.high-performing-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.high-performing-section .section-title {
+  color: #1a202c;
+  font-family: 'Georgia', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.high-performing-section .scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.high-performing-section .image-grid {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+  padding: 10px 0 30px;
+}
+
+.high-performing-section .image-grid:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+.high-performing-section .image-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  background-color: #ffffff;
+  position: relative;
+  height: 380px; /* Keep height fixed so the scroll track stays aligned */
+  width: max-content; /* Let the box fit the image perfectly */
+  flex-shrink: 0;
+}
+
+.high-performing-section .image-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+.high-performing-section .image-card img {
+  height: 100%;
+  width: auto; /* Width adapts naturally to the image's aspect ratio at 380px height */
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.high-performing-section .image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .high-performing-section .image-card {
+    height: 340px;
+    width: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .high-performing-section {
+    padding: 60px 20px;
+  }
+
+  .high-performing-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .high-performing-section .image-card {
+    height: 300px;
+    width: max-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .high-performing-section .section-title {
+    font-size: 2rem;
+  }
+
+  .high-performing-section .image-card {
+    height: 260px;
+    width: max-content;
+  }
+}

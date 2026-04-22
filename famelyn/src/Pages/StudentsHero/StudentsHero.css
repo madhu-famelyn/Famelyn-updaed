@@ -1,0 +1,169 @@
+.students-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 80px;
+  color: #F9F7F2;
+  overflow: hidden;
+
+  /* BACKGROUND IMAGE */
+
+  background-image: url("../../assets/backgroundHeader.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* DARK OVERLAY */
+
+.students-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0,31,63,0.95) 0%,
+    rgba(0,31,63,0.9) 40%,
+    rgba(0,31,63,0.7) 70%,
+    rgba(0,31,63,0.5) 100%
+  );
+
+  z-index: 1;
+}
+
+/* CONTENT */
+
+.students-container {
+  max-width: 850px;
+  position: relative;
+  z-index: 2;
+}
+
+/* SMALL LABEL */
+
+.students-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #C5A059;
+  margin-bottom: 30px;
+}
+
+/* TITLE */
+
+.students-title {
+  font-size: 76px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+/* DESCRIPTION */
+
+.students-description {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 600px;
+  color: #c9d1da;
+  margin-bottom: 50px;
+}
+
+/* CTA BUTTON */
+
+.students-cta {
+  background: #C5A059;
+  border: none;
+  padding: 16px 32px;
+  font-size: 15px;
+  color: #001F3F;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.students-cta:hover {
+  background: #E8D5B7;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.modal-box {
+  background: #001F3F;
+  padding: 40px 35px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  color: #F9F7F2;
+  border: 1px solid rgba(232, 213, 183, 0.2);
+}
+
+/* HEADINGS */
+.modal-box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* FORM */
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-box input,
+.modal-box textarea {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #C5A059;
+  color: #F9F7F2;
+  font-size: 14px;
+}
+
+.modal-box input::placeholder,
+.modal-box textarea::placeholder {
+  color: #aaa;
+}
+
+/* BUTTONS */
+.submit-btn,
+.download-btn {
+  background: #C5A059;
+  border: none;
+  padding: 14px;
+  color: #001F3F;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover,
+.download-btn:hover {
+  background: #E8D5B7;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #C5A059;
+}
+
+/* TEXT */
+.modal-box p {
+  color: #c9d1da;
+  margin-bottom: 20px;
+}

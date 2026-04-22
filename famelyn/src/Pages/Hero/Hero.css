@@ -1,0 +1,207 @@
+.hero {
+  background:
+    url("../../assets/backgroundHeader.png");
+  background-size: cover;
+  background-position: center;
+  color: #F9F7F2;
+}
+
+/* MAIN LAYOUT */
+
+.hero-container {
+  display: grid;
+    background: linear-gradient(
+    90deg,
+    rgba(0,31,63,0.95) 0%,
+    rgba(0,31,63,0.9) 40%,
+    rgba(0,31,63,0.7) 70%,
+    rgba(0,31,63,0.5) 100%
+  );
+
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 120px 40px 120px;
+  gap: 60px;
+}
+
+/* LEFT */
+
+.hero-content {
+  max-width: 700px;
+}
+
+.tagline {
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #C5A059;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.hero-title span {
+  font-style: italic;
+  color: #E8D5B7;
+}
+
+.hero-subtext {
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #d6d6d6;
+}
+
+/* AUDIO */
+
+.audio-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.listen {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #C5A059;
+}
+
+.waveform {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 3px;
+  height: 18px;
+  background: #C5A059;
+  animation: wave 1.6s infinite ease-in-out;
+}
+
+.bar:nth-child(odd) {
+  height: 30px;
+}
+
+@keyframes wave {
+  0% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.4); }
+}
+
+.audio-note {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+/* RIGHT CTA */
+
+.gateway-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gateway {
+  padding: 60px 50px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(232,213,183,0.15);
+}
+
+/* BACKGROUNDS */
+
+.gateway.emerging {
+  background-image:
+    linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.95)),
+    url("../../assets/skyscraper.jpg");
+}
+
+.gateway.executive {
+  background-image:
+    linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.95)),
+    url("../../assets/staircase.jpg");
+}
+
+/* CONTENT */
+
+.gateway-content {
+  max-width: 320px;
+}
+
+.pathway {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #C5A059;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.gateway h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.gateway p {
+  font-size: 15px;
+  color: #cfd6de;
+  margin-bottom: 25px;
+}
+
+/* CTA */
+
+.gateway-cta {
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #E8D5B7;
+  border-bottom: 1px solid #C5A059;
+  padding-bottom: 6px;
+}
+
+.gateway-cta:hover {
+  color: #C5A059;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 160px 30px 100px;
+  }
+
+  .gateway-wrapper {
+    flex-direction: row;
+  }
+
+  .gateway {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .gateway-wrapper {
+    flex-direction: column;
+  }
+
+  .gateway {
+    padding: 40px 30px;
+  }
+}

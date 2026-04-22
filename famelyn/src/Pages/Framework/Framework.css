@@ -1,0 +1,167 @@
+.framework {
+  background: #edeae0;
+  color: #001F3F;
+  padding: 140px 80px;
+}
+
+.framework-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+
+/* LEFT */
+
+.framework-tag {
+font-size: 24px;
+  letter-spacing: 4px;
+  color: #C5A059;
+  margin-bottom: 30px;
+  font-weight: 600; 
+}
+
+.framework-title {
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/* RIGHT */
+
+.framework-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* STEP */
+
+.framework-step {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0,31,63,0.1);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #C5A059;
+  border-radius: 50%;
+}
+
+.step-number {
+  font-size: 28px;
+  color: #C5A059;
+  font-weight: 500;
+}
+
+.framework-step h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.step-desc {
+  margin-left: 40px;
+  font-size: 16px;
+  color: #5a6a7a;
+  max-width: 420px;
+}
+
+/* AUDIO BOX */
+
+.audio-box {
+  margin-top: 40px;
+  border: 1px solid rgba(197,160,89,0.4);
+  background-color: #fffcf6;
+  padding: 24px 30px;
+  max-width: 480px;
+}
+
+.audio-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #C5A059;
+  margin-bottom: 20px;
+}
+
+/* WAVEFORM */
+
+.waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.bar {
+  width: 6px;
+  height: 20px;
+  background: #C5A059;
+  border-radius: 3px;
+  animation: wave 2.5s infinite ease-in-out;
+}
+
+/* variation */
+
+.bar:nth-child(odd) {
+  height: 35px;
+}
+
+.bar:nth-child(3n) {
+  height: 25px;
+}
+
+/* slow luxury animation */
+
+@keyframes wave {
+  0% { transform: scaleY(0.5); opacity: 0.6; }
+  50% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(0.5); opacity: 0.6; }
+}
+
+/* stagger animation */
+
+.bar:nth-child(1) { animation-delay: 0s; }
+.bar:nth-child(2) { animation-delay: 0.1s; }
+.bar:nth-child(3) { animation-delay: 0.2s; }
+.bar:nth-child(4) { animation-delay: 0.3s; }
+.bar:nth-child(5) { animation-delay: 0.4s; }
+.bar:nth-child(6) { animation-delay: 0.5s; }
+.bar:nth-child(7) { animation-delay: 0.6s; }
+.bar:nth-child(8) { animation-delay: 0.7s; }
+.bar:nth-child(9) { animation-delay: 0.8s; }
+.bar:nth-child(10) { animation-delay: 0.9s; }
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .framework-title {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .framework {
+    padding: 100px 24px;
+  }
+
+  .framework-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .framework-title {
+    font-size: 38px;
+  }
+}
