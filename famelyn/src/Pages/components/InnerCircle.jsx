@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import './InnerCircle.css';
-
+import FaqSection from '../FaqSection/FaqSection';
 
 export function InnerCircle() {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ export function InnerCircle() {
           <div className="manifesto-text">
             <p className="section-label">Founder-led philosophy</p>
             <h2 className="section-title">The Founder's Manifesto</h2>
-            <p className="manifesto-description">A two-minute cinematic note on why Famelyn exists: to turn overlooked expertise into undeniable authority.</p>
+            <p className="manifesto-description">What you see today didn’t start as a business idea. It started with a realization that something needed to change.</p>
           </div>
 
           <div className="manifesto-video">
@@ -59,6 +59,7 @@ export function InnerCircle() {
         </div>
       </section>
 
+      <FaqSection/>
       {/* Section 2: Inner Circle Form */}
       <section className="section inner-circle-section">
         <div className="inner-circle-container-wrapper">

@@ -16,12 +16,15 @@ function Mainmodule() {
       <Hero />
       <ProblemSection/>
       <Framework/>
-      <FaqSection/>
+     
       <USPSection/>
       <HighPerformingPosts/>
       <ImageSlider/>
+      
       <SignalSection/>
+      {/* <FaqSection/> */}
       <InnerCircle/>
+       
       
     </>
   );
