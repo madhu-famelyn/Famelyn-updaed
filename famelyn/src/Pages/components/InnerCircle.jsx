@@ -3,26 +3,8 @@ import './InnerCircle.css';
 import FaqSection from '../FaqSection/FaqSection';
 
 export function InnerCircle() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    linkedinUrl: ''
-  });
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
 
   const handlePlayAudio = () => {
     if (audioRef.current) {
@@ -75,15 +57,20 @@ export function InnerCircle() {
             </div>
 
             <div className="right-section">
-              <form onSubmit={handleSubmit} className="intake-form">
+              <form
+                className="intake-form contact-form"
+                action="https://.io/f/xanjlkyz"
+                method="POST"
+              >
+                <input type="text" name="_honey" style={{ display: 'none' }} />
+                <input type="hidden" name="_captcha" value="false" />
+
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">NAME</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     className="form-input"
                     required
                   />
@@ -95,27 +82,43 @@ export function InnerCircle() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     className="form-input"
                     required
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="linkedinUrl" className="form-label">LINKEDIN URL</label>
+                  <label htmlFor="phone" className="form-label">PHONE NUMBER</label>
                   <input
-                    type="url"
-                    id="linkedinUrl"
-                    name="linkedinUrl"
-                    value={formData.linkedinUrl}
-                    onChange={handleChange}
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     className="form-input"
-                    required
                   />
                 </div>
 
-                <button type="submit" className="submit-button">Request Access</button>
+                <div className="form-group">
+                  <label htmlFor="linkedin" className="form-label">LINKEDIN URL</label>
+                  <input
+                    type="url"
+                    id="linkedin"
+                    name="linkedin"
+                    className="form-input"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="message" className="form-label">MESSAGE</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    className="form-input"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" className="submit-button cta-button">Send Message</button>
               </form>
             </div>
           </div>
