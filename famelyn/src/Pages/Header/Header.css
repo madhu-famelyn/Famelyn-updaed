@@ -18,6 +18,28 @@ html, body {
   box-sizing: border-box;
 }
 
+
+/* LOGO LINK */
+.logo-link {
+  text-decoration: none;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #F9F7F2;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* GOLD DOT */
+.logo-dot {
+  color: #C5A059;
+  margin-left: 1px;
+  font-weight: 700;
+}
 /* CONTAINER */
 .header-container {
   display: flex;
