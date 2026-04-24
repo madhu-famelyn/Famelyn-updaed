@@ -43,7 +43,7 @@ export function InnerCircle() {
 
       <FaqSection/>
       {/* Section 2: Inner Circle Form */}
-      <section className="section inner-circle-section">
+      <section id="inner-circle" className="section inner-circle-section">
         <div className="inner-circle-container-wrapper">
           <div className="inner-circle-content">
             <div className="left-section">
@@ -146,10 +146,10 @@ export function InnerCircle() {
           </div>
 
           <nav className="footer-nav">
-            <a href="/students">Students</a>
+            <a href="/emerging-leader">Students</a>
             <a href="/professionals">Professionals</a>
-            <a href="https://www.linkedin.com">LinkedIn</a>
-            <a href="mailto:hello@famelyn.com">Email</a>
+            <a href="https://www.linkedin.com/company/famelyn/posts/?feedView=all">LinkedIn</a>
+            <a href="mailto:yv@famelyn.com">Email</a>
           </nav>
         </div>
       </section>

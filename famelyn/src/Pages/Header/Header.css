@@ -1,9 +1,13 @@
-/* IMPORT POPPINS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* GLOBAL FIX (VERY IMPORTANT) */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 prevents horizontal scroll */
+}
 
 /* HEADER */
 .famelyn-header {
-  width: 100%;
+  width: 99%;
   padding: 20px 40px;
   background: #001F3F;
   position: fixed;
@@ -11,6 +15,7 @@
   left: 0;
   z-index: 100;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 /* CONTAINER */
@@ -18,14 +23,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-}
-
-/* LOGO LINK */
-.logo-link {
-  text-decoration: none;
 }
 
 /* LOGO */
@@ -36,13 +35,6 @@
   display: flex;
   align-items: center;
   font-weight: 500;
-}
-
-/* GOLD DOT */
-.logo-dot {
-  color: #C5A059;
-  margin-left: 1px;
-  font-weight: 700;
 }
 
 /* NAVIGATION */
@@ -58,10 +50,8 @@
   font-size: 14px;
   letter-spacing: 1px;
   transition: 0.3s;
-  position: relative;
 }
 
-/* HOVER EFFECT */
 .nav-item:hover {
   color: #C5A059;
 }
@@ -71,40 +61,68 @@
   border: 1px solid #C5A059;
   padding: 10px 20px;
   background: transparent;
-  margin-right: 8px;
   color: #E8D5B7;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s;
   white-space: nowrap;
 }
 
-.consultation-btn:hover {
-  background: #C5A059;
-  color: #001F3F;
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #E8D5B7;
+}
+
+/* ✅ FIXED MOBILE SIDEBAR */
+.mobile-sidebar {
+  position: fixed; /* 🔥 changed from absolute */
+  top: 0;
+  left: -100%; /* hidden by default */
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: linear-gradient(180deg, #001F3F 0%, #003d5c 100%);
+  border-right: 2px solid #C5A059;
+  padding-top: 80px;
+  transition: 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+/* WHEN OPEN */
+.mobile-sidebar.open {
+  left: 0;
+}
+
+/* SIDEBAR ITEMS */
+.sidebar-item {
+  padding: 15px 20px;
+  color: #E8D5B7;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
-  .famelyn-header {
-    padding: 16px 24px;
-  }
-
-  .nav-links {
-    gap: 25px;
-  }
-}
-
 @media (max-width: 768px) {
-
-  .nav-links {
-    display: none; /* hide menu on mobile for now */
+  .nav-links,
+  .consultation-btn {
+    display: none;
   }
 
-  .consultation-btn {
-    padding: 8px 14px;
-    font-size: 12px;
+  .hamburger {
+    display: flex;
   }
 }
