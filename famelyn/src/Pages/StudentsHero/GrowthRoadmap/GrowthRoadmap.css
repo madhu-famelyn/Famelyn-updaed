@@ -96,3 +96,89 @@
   background-color: #c9a96e;
   color: white;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .roadmap-top {
+    flex-direction: column;
+    padding: 80px 60px;
+    gap: 50px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .roadmap-bottom {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 60px;
+    align-items: flex-start;
+  }
+
+  .roadmap-bottom h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-top {
+    padding: 50px 20px;
+    gap: 30px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .label {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .item {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .number {
+    font-size: 24px;
+    min-width: 40px;
+  }
+
+  .item h3 {
+    font-size: 18px;
+  }
+
+  .item p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .roadmap-bottom {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .roadmap-bottom h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

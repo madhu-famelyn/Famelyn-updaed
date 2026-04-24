@@ -161,3 +161,74 @@
   margin-bottom: 20px;
   color: #c7d0dc;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .eh-wrapper {
+    padding: 0 50px;
+    min-height: auto;
+  }
+
+  .eh-title {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  .eh-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eh-wrapper {
+    padding: 60px 20px;
+    min-height: auto;
+    margin-top: 30px;
+  }
+
+  .eh-content {
+    max-width: 100%;
+  }
+
+  .eh-label {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .eh-title {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .eh-description {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .eh-cta-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .eh-modal-container {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .eh-modal-title {
+    margin-bottom: 15px;
+  }
+
+  .eh-form input,
+  .eh-form textarea {
+    font-size: 13px;
+  }
+
+  .eh-submit-btn,
+  .eh-download-btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

@@ -167,3 +167,74 @@
   color: #c9d1da;
   margin-bottom: 20px;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .students-hero {
+    padding: 100px 40px;
+    min-height: auto;
+  }
+
+  .students-title {
+    font-size: 56px;
+    margin-bottom: 30px;
+  }
+
+  .students-description {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .students-hero {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .students-container {
+    max-width: 100%;
+  }
+
+  .students-label {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .students-title {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .students-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .students-cta {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .modal-box {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .modal-box h2 {
+    font-size: 18px;
+  }
+
+  .modal-box input,
+  .modal-box textarea {
+    font-size: 13px;
+  }
+
+  .submit-btn,
+  .download-btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

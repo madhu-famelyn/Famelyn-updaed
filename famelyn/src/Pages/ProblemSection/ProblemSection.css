@@ -80,7 +80,15 @@
 
 @media (max-width: 768px) {
   .problem-section {
-    padding: 100px 24px;
+    padding: 80px 24px;
+  }
+
+  .problem-container {
+    max-width: 100%;
+  }
+
+  .problem-tag {
+    font-size: 18px;
   }
 
   .problem-grid {
@@ -98,5 +106,36 @@
 
   .problem-title {
     font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .problem-item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .problem-section {
+    padding: 50px 16px;
+  }
+
+  .problem-tag {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .problem-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+    line-height: 1.1;
+  }
+
+  .problem-grid {
+    gap: 30px;
+  }
+
+  .problem-item p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }

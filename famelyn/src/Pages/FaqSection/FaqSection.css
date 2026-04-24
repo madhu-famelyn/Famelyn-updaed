@@ -75,12 +75,90 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .faq-wrapper {
+    padding: 80px 20px;
+  }
+
   .faq-title {
-    font-size: 32px;
+    font-size: 36px;
+  }
+
+  .faq-label {
+    font-size: 18px;
   }
 
   .faq-question {
+    font-size: 17px;
+  }
+
+  .faq-icon {
+    font-size: 20px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-wrapper {
+    padding: 60px 16px;
+  }
+
+  .faq-label {
+    font-size: 14px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .faq-item {
+    padding: 16px 0;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-icon {
+    font-size: 18px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-wrapper {
+    padding: 40px 12px;
+  }
+
+  .faq-label {
+    font-size: 12px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    padding: 14px 0;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-icon {
     font-size: 16px;
+  }
+
+  .faq-answer p {
+    font-size: 12px;
   }
 }

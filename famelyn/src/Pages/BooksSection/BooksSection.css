@@ -82,3 +82,65 @@
   color: #C5A059;
   font-weight: 500;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .books-wrapper {
+    padding: 80px 20px;
+  }
+
+  .books-title {
+    font-size: 36px;
+  }
+
+  .books-subtext {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .books-grid {
+    gap: 30px;
+  }
+
+  .book-card {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .books-wrapper {
+    padding: 60px 16px;
+  }
+
+  .books-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .books-label {
+    font-size: 11px;
+  }
+
+  .books-subtext {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .books-grid {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .book-card {
+    max-width: 180px;
+  }
+
+  .book-title {
+    font-size: 13px;
+  }
+
+  .books-footer {
+    font-size: 14px;
+    margin-top: 50px;
+  }
+}

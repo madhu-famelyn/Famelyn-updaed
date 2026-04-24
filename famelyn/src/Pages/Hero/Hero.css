@@ -204,4 +204,123 @@
   .gateway {
     padding: 40px 30px;
   }
+
+  .hero-container {
+    padding: 100px 20px 60px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .tagline {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtext {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .audio-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .listen {
+    font-size: 10px;
+  }
+
+  .audio-note {
+    font-size: 10px;
+  }
+
+  .gateway h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .gateway p {
+    font-size: 14px;
+  }
+
+  .gateway-content {
+    max-width: 100%;
+  }
+
+  .pathway {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 80px 16px 50px;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .waveform {
+    gap: 2px;
+  }
+
+  .bar {
+    width: 2px;
+    height: 14px;
+  }
+
+  .bar:nth-child(odd) {
+    height: 22px;
+  }
+
+  .listen {
+    font-size: 9px;
+  }
+
+  .audio-note {
+    font-size: 9px;
+  }
+
+  .gateway-wrapper {
+    gap: 12px;
+  }
+
+  .gateway {
+    padding: 30px 20px;
+  }
+
+  .gateway h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .gateway p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .gateway-cta {
+    font-size: 11px;
+  }
+
+  .pathway {
+    font-size: 9px;
+    margin-bottom: 12px;
+  }
 }
