@@ -4,75 +4,67 @@ import "./Framework.css";
 const steps = [
   {
     number: "01",
-    title: "Authority Positioning",
-    desc: "A precise layer in transforming quiet competence into high-value digital equity."
+    title: "Niche Clarity",
+    desc: "Define your niche, strengths, and audience for clear direction."
   },
   {
     number: "02",
-    title: "Narrative Architecture",
-    desc: "A precise layer in transforming quiet competence into high-value digital equity."
+    title: "Profile Optimization",
+    desc: "Revamp your profile for strong positioning."
   },
   {
     number: "03",
-    title: "Digital Leverage",
-    desc: "A precise layer in transforming quiet competence into high-value digital equity."
+    title: "Custom Content",
+    desc: "Create content aligned with your voice and goals."
+  },
+  {
+    number: "04",
+    title: "Consistent Posting",
+    desc: "Build visibility through regular posting."
+  },
+  {
+    number: "05",
+    title: "Strategic Engagement",
+    desc: "Grow reach through meaningful interactions."
+  },
+  {
+    number: "06",
+    title: "Growth Outcome",
+    desc: "Achieve authority, opportunities, and credibility."
   }
 ];
 
-const Framework = () => {
+export default function Framework() {
   return (
-    <section className="framework">
+    <section className="growth-section">
 
-      <div className="framework-container">
+      <div className="growth-header">
+        <p className="growth-tag">GROWTH PROCESS</p>
+        <h2 className="growth-title">
+          Your LinkedIn Growth Journey
+        </h2>
+      </div>
 
-        {/* LEFT */}
-        <div className="framework-left">
-          <p className="framework-tag">CORE METHOD</p>
+      <div className="growth-path">
 
-          <h1 className="framework-title">
-            The Famelyn <br /> Framework
-          </h1>
-        </div>
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className={`growth-step ${index % 2 === 0 ? "left" : "right"}`}
+          >
+            <div className="growth-card">
 
-        {/* RIGHT */}
-        <div className="framework-right">
+              <span className="growth-number">{step.number}</span>
 
-          {steps.map((item, i) => (
-            <div key={i} className="framework-step">
-
-              <div className="step-header">
-                <span className="dot"></span>
-                <span className="step-number">{item.number}</span>
-                <h3>{item.title}</h3>
-              </div>
-
-              <p className="step-desc">{item.desc}</p>
+              <h3>{step.title}</h3>
+              <p>{step.desc}</p>
 
             </div>
-          ))}
-
-          {/* AUDIO BLOCK */}
-          <div className="audio-box">
-
-            <div className="audio-header">
-              <span>FOUNDER PHILOSOPHY</span>
-              <span>0:30</span>
-            </div>
-
-            <div className="waveform">
-              {Array.from({ length: 25 }).map((_, i) => (
-                <div key={i} className="bar"></div>
-              ))}
-            </div>
-
           </div>
-
-        </div>
+        ))}
 
       </div>
 
     </section>
   );
-};
-
-export default Framework;
+}

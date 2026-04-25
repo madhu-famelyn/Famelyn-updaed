@@ -1,0 +1,137 @@
+.testimonials-section {
+  background: #001F3F;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* LABEL */
+.testimonials-label {
+  color: #C5A059;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.testimonials-title {
+  color: #F9F7F2;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+/* MARQUEE WRAPPER */
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* TRACK */
+.marquee-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* CARD */
+.testimonial-card {
+  min-width: 280px;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  padding: 25px;
+  text-align: left;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.testimonial-card:hover {
+  border-color: #C5A059;
+  transform: translateY(-5px);
+}
+
+/* HEADER */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+/* AVATAR */
+.testimonial-avatar {
+  width: 45px;
+  height: 45px;
+  background: #C5A059;
+  color: #001F3F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+/* NAME */
+.testimonial-name {
+  color: #F9F7F2;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ROLE */
+.testimonial-role {
+  color: #E8D5B7;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* TEXT */
+.testimonial-text {
+  color: #E8D5B7;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* STARS */
+.testimonial-stars {
+  color: #C5A059;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* SCROLL ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* OPTIONAL: Pause on hover */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: 26px;
+  }
+
+  .testimonial-card {
+    min-width: 240px;
+  }
+}

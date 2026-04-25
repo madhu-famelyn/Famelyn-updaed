@@ -56,7 +56,7 @@ const Hero = () => {
 
           <div className="gateway emerging">
             <div className="gateway-content">
-              <span className="pathway">PATHWAY I</span>
+              {/* <span className="pathway">PATHWAY I</span> */}
 
               <h2>The Emerging Leader</h2>
 
@@ -72,7 +72,7 @@ const Hero = () => {
 
           <div className="gateway executive">
             <div className="gateway-content">
-              <span className="pathway">PATHWAY II</span>
+              {/* <span className="pathway">PATHWAY II</span> */}
 
               <h2>The Established Executive</h2>
 

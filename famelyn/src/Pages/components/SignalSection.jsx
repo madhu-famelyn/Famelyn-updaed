@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import ImageSlider from "./ImageSlider";
+// import ImageSlider from "./ImageSlider";
 import "./SignalSection.css";
 
 export default function SignalSection() {
@@ -64,11 +64,11 @@ export default function SignalSection() {
 
           {/* Card Left */}
           <div className="card post">
-            <ImageSlider />
+            {/* <ImageSlider /> */}
           </div>
 
           {/* Card Right */}
-          <div className="card growth">
+          {/* <div className="card growth">
             <p className="small-label">BEFORE / AFTER GROWTH</p>
 
             <div className="bar-group">
@@ -76,8 +76,8 @@ export default function SignalSection() {
                 <span>Before</span>
                 <span>Low visibility</span>
               </div>
-              <div className="bar bg">
-                <div className="fill before"></div>
+              <div className="growth-bar-track">
+                <div className="growth-bar-fill before"></div>
               </div>
             </div>
 
@@ -86,8 +86,8 @@ export default function SignalSection() {
                 <span>After</span>
                 <span>Authority visibility</span>
               </div>
-              <div className="bar bg">
-                <div className="fill after"></div>
+              <div className="growth-bar-track">
+                <div className="growth-bar-fill after"></div>
               </div>
             </div>
 
@@ -95,7 +95,7 @@ export default function SignalSection() {
             <p className="growth-text">
               Profile discovery from strategic narrative architecture.
             </p>
-          </div>
+          </div> */}
 
         </div>
       </div>

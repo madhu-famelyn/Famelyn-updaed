@@ -59,7 +59,7 @@ export function InnerCircle() {
             <div className="right-section">
               <form
                 className="intake-form contact-form"
-                action="https://.io/f/xanjlkyz"
+                action="https://formspree.io/f/xanjlkyz"
                 method="POST"
               >
                 <input type="text" name="_honey" style={{ display: 'none' }} />
@@ -129,10 +129,12 @@ export function InnerCircle() {
       <section className="section footer-section">
         <div className="section-content footer-content">
           <div className="footer-main">
-            <h3 className="footer-logo">Famelyn</h3>
+            <h3 className="footer-logo">
+              Famelyn<span className="footer-logo-dot">.</span>
+            </h3>
             <p className="footer-quote">"If you're ready to stop being the best-kept secret in your industry, let's talk."</p>
             <div className={`audio-card ${isPlaying ? 'playing' : ''}`} onClick={handlePlayAudio}>
-              <audio ref={audioRef} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+              {/* <audio ref={audioRef} src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" /> */}
               <div className="audio-header">
                 <span className="play-text">{isPlaying ? '⏸ Pause' : '▶ Play'} - Final founder voice</span>
                 <span>0:10</span>
@@ -148,8 +150,8 @@ export function InnerCircle() {
           <nav className="footer-nav">
             <a href="/emerging-leader">Students</a>
             <a href="/professionals">Professionals</a>
-            <a href="https://www.linkedin.com/company/famelyn/posts/?feedView=all">LinkedIn</a>
-            <a href="mailto:yv@famelyn.com">Email</a>
+            <a href="https://www.linkedin.com/company/famelyn">LinkedIn</a>
+            <a href="https://www.instagram.com/famelyn_/">Instagram</a>
           </nav>
         </div>
       </section>

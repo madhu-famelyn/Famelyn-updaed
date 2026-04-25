@@ -5,9 +5,30 @@ const StudentsHero = () => {
   const [openModal, setOpenModal] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xanjlkyz", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        alert("Something went wrong. Try again.");
+      }
+    } catch (error) {
+      alert("Network error");
+    }
   };
 
   const handleDownload = () => {
@@ -57,11 +78,43 @@ const StudentsHero = () => {
               <>
                 <h2>Get Your Growth Roadmap</h2>
 
-                <form onSubmit={handleSubmit}>
-                  <input type="text" placeholder="Your Name" required />
-                  <input type="email" placeholder="Your Email" required />
+                <form onSubmit={handleSubmit} className="contact-form">
+                  
+                  <input type="text" name="_honey" style={{ display: "none" }} />
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+
+                  <input
+                    type="url"
+                    name="linkedin"
+                    placeholder="LinkedIn URL"
+                    required
+                  />
+
                   <textarea
-                    placeholder="Why are you interested?"
+                    name="message"
+                    placeholder="Your Message"
+                    rows="4"
                     required
                   ></textarea>
 

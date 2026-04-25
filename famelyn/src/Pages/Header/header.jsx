@@ -31,7 +31,7 @@ const Header = () => {
         {/* LOGO */}
         <Link to="/" className="logo-link">
           <div className="logo">
-            FAMELYN<span className="logo-dot">.</span>
+            Famelyn<span className="logo-dot">.</span>
           </div>
         </Link>
 

@@ -4,10 +4,35 @@ import "./HeroSection.css";
 export default function ExecutiveHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setLoading(true);
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xanjlkyz", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Network error. Please try again.");
+    }
+
+    setLoading(false);
   };
 
   const handleClose = () => {
@@ -18,12 +43,10 @@ export default function ExecutiveHero() {
   return (
     <>
       <section className="eh-wrapper">
-
         <div className="eh-overlay-dark"></div>
         <div className="eh-overlay-lines"></div>
 
         <div className="eh-content">
-
           <p className="eh-label">
             FOR FOUNDERS, ESTABLISHED EXECUTIVE
           </p>
@@ -46,7 +69,6 @@ export default function ExecutiveHero() {
           >
             Request a Presence Audit
           </button>
-
         </div>
       </section>
 
@@ -57,15 +79,57 @@ export default function ExecutiveHero() {
 
             {!isSubmitted ? (
               <>
-                <h2 className="eh-modal-title">Request Your Presence Audit</h2>
+                <h2 className="eh-modal-title">
+                  Request Your Presence Audit
+                </h2>
 
                 <form onSubmit={handleSubmit} className="eh-form">
-                  <input type="text" placeholder="Your Name" required />
-                  <input type="email" placeholder="Your Email" required />
-                  <textarea placeholder="Why are you interested?" required />
 
-                  <button type="submit" className="eh-submit-btn">
-                    Submit
+                  {/* Hidden fields for Formspree */}
+                  <input type="text" name="_honey" style={{ display: "none" }} />
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+
+                  <input
+                    type="url"
+                    name="linkedin"
+                    placeholder="LinkedIn URL"
+                    required
+                  />
+
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    rows="4"
+                    required
+                  ></textarea>
+
+                  <button
+                    type="submit"
+                    className="eh-submit-btn"
+                    disabled={loading}
+                  >
+                    {loading ? "Submitting..." : "Submit"}
                   </button>
                 </form>
               </>

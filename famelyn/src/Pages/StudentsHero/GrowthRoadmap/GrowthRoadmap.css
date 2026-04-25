@@ -81,6 +81,27 @@
   font-weight: 500;
 }
 
+.roadmap-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.roadmap-cta {
+  padding: 12px 24px;
+  border: 1px solid #c9a96e;
+  background: #c9a96e;
+  color: #001F3F;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.roadmap-cta:hover {
+  background: #b8965d;
+  border-color: #b8965d;
+}
+
 /* BUTTON */
 .back-btn {
   padding: 12px 24px;
@@ -95,6 +116,93 @@
 .back-btn:hover {
   background-color: #c9a96e;
   color: white;
+}
+
+/* MODAL */
+.student-roadmap-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.student-roadmap-modal {
+  width: min(420px, 100%);
+  background: #001F3F;
+  color: #F9F7F2;
+  border: 1px solid rgba(232, 213, 183, 0.22);
+  padding: 40px 35px;
+  position: relative;
+}
+
+.student-roadmap-modal h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.student-roadmap-modal p {
+  color: #c9d1da;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.student-roadmap-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-roadmap-form input,
+.student-roadmap-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #c9a96e;
+  color: #F9F7F2;
+  font-size: 14px;
+}
+
+.student-roadmap-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.student-roadmap-form input::placeholder,
+.student-roadmap-form textarea::placeholder {
+  color: #aaa;
+}
+
+.student-roadmap-submit {
+  background: #c9a96e;
+  border: none;
+  padding: 14px;
+  color: #001F3F;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.student-roadmap-submit:hover {
+  background: #E8D5B7;
+}
+
+.student-roadmap-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  color: #c9a96e;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
 }
 
 /* RESPONSIVE */
@@ -123,6 +231,11 @@
 
   .roadmap-bottom h2 {
     font-size: 28px;
+  }
+
+  .roadmap-actions {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
@@ -177,8 +290,33 @@
     margin-bottom: 20px;
   }
 
+  .roadmap-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .roadmap-cta,
   .back-btn {
     width: 100%;
     text-align: center;
+  }
+
+  .student-roadmap-modal {
+    padding: 30px 25px;
+  }
+
+  .student-roadmap-modal h2 {
+    font-size: 18px;
+  }
+
+  .student-roadmap-form input,
+  .student-roadmap-form textarea {
+    font-size: 13px;
+  }
+
+  .student-roadmap-submit {
+    padding: 12px;
+    font-size: 13px;
   }
 }

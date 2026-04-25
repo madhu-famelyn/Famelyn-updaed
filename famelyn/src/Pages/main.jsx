@@ -5,9 +5,9 @@ import Framework from "./Framework/Framework";
 import FaqSection from "./FaqSection/FaqSection";
 import USPSection from "./USPSection/USPSection";
 import HighPerformingPosts from "./components/HighPerformingPosts";
-import ImageSlider from "./components/ImageSlider";
 import { InnerCircle } from "./components/InnerCircle";
 import SignalSection from "./components/SignalSection";
+import TestimonialsMain from "./Testimonials/Testimonials";
 
 function Mainmodule() {
   return (
@@ -19,9 +19,9 @@ function Mainmodule() {
      
       <USPSection/>
       <HighPerformingPosts/>
-      <ImageSlider/>
       
       <SignalSection/>
+      <TestimonialsMain/>
       {/* <FaqSection/> */}
       <InnerCircle/>
        
