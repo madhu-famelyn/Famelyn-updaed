@@ -24,24 +24,23 @@ export function InnerCircle() {
         <div className="section-content">
           <div className="manifesto-text">
             <p className="section-label">Founder-led philosophy</p>
-            <h2 className="section-title">The Founder's Manifesto</h2>
+            <h2 className="section-title">Founders Manifesto</h2>
             <p className="manifesto-description">What you see today didn’t start as a business idea. It started with a realization that something needed to change.</p>
           </div>
 
           <div className="manifesto-video">
-            <div className="video-border"></div>
-            <div className="video-content">
-              <div className="video-footer">
-                <div className="video-line"></div>
-                <p className="video-time">02:00</p>
-                <p className="video-label">Manifesto film</p>
-              </div>
-            </div>
+            <video
+              src="/manifesto.mp4"
+              className="manifesto-iframe"
+              controls
+              playsInline
+              title="Founders Manifesto Film"
+            ></video>
           </div>
         </div>
       </section>
 
-      <FaqSection/>
+      <FaqSection />
       {/* Section 2: Inner Circle Form */}
       <section id="inner-circle" className="section inner-circle-section">
         <div className="inner-circle-container-wrapper">
@@ -49,7 +48,7 @@ export function InnerCircle() {
             <div className="left-section">
               <p className="intake-label">PRIVATE INTAKE</p>
               <h1 className="main-heading">Access the Inner Circle</h1>
-              
+
               <ul className="benefits-list">
                 <li>Download Free Ebook</li>
                 <li>Book a 10-min LinkedIn Consultation</li>

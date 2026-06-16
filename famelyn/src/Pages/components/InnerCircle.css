@@ -70,52 +70,30 @@
 /* Video Card */
 .manifesto-video {
   position: relative;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
   border: 1px solid rgba(232, 220, 200, 0.16);
-  background: rgba(13, 40, 71, 0.5);
-  padding: 1.5rem;
+  background: #000;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-top: 3rem;
+  border-radius: 4px;
 }
 
-.video-border {
+/* Video / Iframe Player - full size, Famelyn logo stays visible */
+.manifesto-iframe {
   position: absolute;
-  inset: 1.5rem;
-  border: 1px solid rgba(196, 169, 105, 0.35);
-}
-
-.video-content {
-  position: absolute;
-  inset: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.video-footer {
-  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
   z-index: 10;
 }
 
-.video-line {
-  height: 1px;
-  background: var(--gold);
-  opacity: 0.5;
-  margin-bottom: 1.5rem;
-}
 
-.video-time {
-  font-size: 2.25rem;
-  color: var(--ivory);
-  font-weight: 500;
-}
-
-.video-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
-  color: var(--gold);
-  margin-top: 0.5rem;
-}
 
 /* Section 2: Inner Circle Form (Light Beige) */
 .inner-circle-section {
@@ -287,7 +265,7 @@ textarea.form-input {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .footer-section {
     padding: 2rem 1.5rem;
   }
@@ -371,28 +349,78 @@ textarea.form-input {
   animation: waveAnimation 1.2s ease-in-out infinite;
 }
 
-.waveform-bar:nth-child(1) { animation-delay: 0s; }
-.waveform-bar:nth-child(2) { animation-delay: 0.1s; }
-.waveform-bar:nth-child(3) { animation-delay: 0.2s; }
-.waveform-bar:nth-child(4) { animation-delay: 0.3s; }
-.waveform-bar:nth-child(5) { animation-delay: 0.4s; }
-.waveform-bar:nth-child(6) { animation-delay: 0.5s; }
-.waveform-bar:nth-child(7) { animation-delay: 0.6s; }
-.waveform-bar:nth-child(8) { animation-delay: 0.7s; }
-.waveform-bar:nth-child(9) { animation-delay: 0.8s; }
-.waveform-bar:nth-child(10) { animation-delay: 0.9s; }
-.waveform-bar:nth-child(11) { animation-delay: 1s; }
-.waveform-bar:nth-child(12) { animation-delay: 0.8s; }
-.waveform-bar:nth-child(13) { animation-delay: 0.6s; }
-.waveform-bar:nth-child(14) { animation-delay: 0.4s; }
-.waveform-bar:nth-child(15) { animation-delay: 0.2s; }
-.waveform-bar:nth-child(16) { animation-delay: 0s; }
+.waveform-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.waveform-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.waveform-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.waveform-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.waveform-bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.waveform-bar:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.waveform-bar:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.waveform-bar:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.waveform-bar:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.waveform-bar:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+.waveform-bar:nth-child(11) {
+  animation-delay: 1s;
+}
+
+.waveform-bar:nth-child(12) {
+  animation-delay: 0.8s;
+}
+
+.waveform-bar:nth-child(13) {
+  animation-delay: 0.6s;
+}
+
+.waveform-bar:nth-child(14) {
+  animation-delay: 0.4s;
+}
+
+.waveform-bar:nth-child(15) {
+  animation-delay: 0.2s;
+}
+
+.waveform-bar:nth-child(16) {
+  animation-delay: 0s;
+}
 
 @keyframes waveAnimation {
-  0%, 100% {
+
+  0%,
+  100% {
     height: 30%;
     opacity: 0.6;
   }
+
   50% {
     height: 100%;
     opacity: 1;

@@ -12,13 +12,11 @@
 
 .hero-container {
   display: grid;
-    background: linear-gradient(
-    90deg,
-    rgba(0,31,63,0.95) 0%,
-    rgba(0,31,63,0.9) 40%,
-    rgba(0,31,63,0.7) 70%,
-    rgba(0,31,63,0.5) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 31, 63, 0.95) 0%,
+      rgba(0, 31, 63, 0.9) 40%,
+      rgba(0, 31, 63, 0.7) 70%,
+      rgba(0, 31, 63, 0.5) 100%);
 
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
@@ -61,48 +59,34 @@
   color: #d6d6d6;
 }
 
-/* AUDIO */
+/* VIDEO SECTION */
 
-.audio-section {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.hero-video-section {
+  width: 100%;
+  max-width: 640px;
+  position: relative;
+  padding-bottom: min(56.25%, 360px);
+  /* 16:9, capped for max-width */
+  height: 0;
+  border: 1px solid rgba(232, 220, 200, 0.16);
+  background: #000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-top: 10px;
 }
 
-.listen {
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #C5A059;
+/* Hero Video Player - full size, no clipping so Famelyn logo stays visible */
+.hero-video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.waveform {
-  display: flex;
-  gap: 3px;
-  align-items: flex-end;
-}
 
-.bar {
-  width: 3px;
-  height: 18px;
-  background: #C5A059;
-  animation: wave 1.6s infinite ease-in-out;
-}
 
-.bar:nth-child(odd) {
-  height: 30px;
-}
-
-@keyframes wave {
-  0% { transform: scaleY(0.4); }
-  50% { transform: scaleY(1); }
-  100% { transform: scaleY(0.4); }
-}
-
-.audio-note {
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #aaa;
-}
 
 /* RIGHT CTA */
 
@@ -116,20 +100,20 @@
   padding: 60px 50px;
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(232,213,183,0.15);
+  border: 1px solid rgba(232, 213, 183, 0.15);
 }
 
 /* BACKGROUNDS */
 
 .gateway.emerging {
   background-image:
-    linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.95)),
+    linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)),
     url("../../assets/skyscraper.jpg");
 }
 
 .gateway.executive {
   background-image:
-    linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.95)),
+    linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)),
     url("../../assets/staircase.jpg");
 }
 
@@ -231,18 +215,7 @@
     overflow-wrap: break-word;
   }
 
-  .audio-section {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .listen {
-    font-size: 10px;
-  }
-
-  .audio-note {
-    font-size: 10px;
-  }
 
   .gateway h2 {
     font-size: 22px;
@@ -292,26 +265,7 @@
     overflow-wrap: break-word;
   }
 
-  .waveform {
-    gap: 2px;
-  }
 
-  .bar {
-    width: 2px;
-    height: 14px;
-  }
-
-  .bar:nth-child(odd) {
-    height: 22px;
-  }
-
-  .listen {
-    font-size: 9px;
-  }
-
-  .audio-note {
-    font-size: 9px;
-  }
 
   .gateway-wrapper {
     gap: 12px;
@@ -387,30 +341,7 @@
     padding: 25px 16px;
   }
 
-  .waveform {
-    gap: 1px;
-  }
 
-  .bar {
-    width: 2px;
-    height: 10px;
-  }
-
-  .bar:nth-child(odd) {
-    height: 18px;
-  }
-
-  .audio-section {
-    gap: 8px;
-  }
-
-  .listen {
-    font-size: 8px;
-  }
-
-  .audio-note {
-    font-size: 8px;
-  }
 
   .pathway {
     font-size: 8px;

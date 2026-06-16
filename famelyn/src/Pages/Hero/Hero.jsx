@@ -25,7 +25,7 @@ const Hero = () => {
 
           {/* MAIN VALUE PROP */}
           <p className="hero-subtext">
-            We turn your profile into a clear, credible, and compelling reflection 
+            We turn your profile into a clear, credible, and compelling reflection
             of your value — bringing structure, strategy, and intent to how you're seen.
           </p>
 
@@ -34,19 +34,15 @@ const Hero = () => {
             Start Your LinkedIn Upgrade
           </button> */}
 
-          {/* AUDIO SECTION */}
-          <div className="audio-section">
-            <span className="listen">LISTEN</span>
-
-            <div className="waveform">
-              {Array.from({ length: 30 }).map((_, i) => (
-                <div key={i} className="bar"></div>
-              ))}
-            </div>
-
-            <span className="audio-note">
-              A NOTE FROM THE FOUNDER · 15S
-            </span>
+          {/* VIDEO SECTION */}
+          <div className="hero-video-section">
+            <video
+              src="/founder-note.mp4"
+              className="hero-video-player"
+              controls
+              playsInline
+              title="Founder Note Video"
+            ></video>
           </div>
 
         </div>
