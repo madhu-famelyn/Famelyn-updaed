@@ -435,6 +435,10 @@ textarea.form-input {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 1024px) {
+  .section {
+    min-height: auto;
+  }
+
   .inner-circle-section {
     padding: 2.5rem 2rem;
   }
