@@ -30,7 +30,7 @@ export function InnerCircle() {
 
           <div className="manifesto-video">
             <video
-              src="/manifesto.mp4"
+              src="/FAMELYN-1.mp4"
               className="manifesto-iframe"
               controls
               playsInline
