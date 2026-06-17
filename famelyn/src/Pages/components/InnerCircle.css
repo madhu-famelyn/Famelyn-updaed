@@ -69,6 +69,7 @@
 
 /* Video Card */
 .manifesto-video {
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
@@ -535,23 +536,6 @@ textarea.form-input {
     font-size: 1rem;
   }
 
-  .manifesto-video {
-    aspect-ratio: 16 / 9;
-    padding: 1rem;
-  }
-
-  .video-border {
-    inset: 1rem;
-  }
-
-  .video-content {
-    inset: 1rem;
-  }
-
-  .video-time {
-    font-size: 1.5rem;
-  }
-
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -616,19 +600,6 @@ textarea.form-input {
 
   .section-title {
     font-size: 1.5rem;
-  }
-
-  .manifesto-video {
-    padding: 0.75rem;
-  }
-
-  .video-border,
-  .video-content {
-    inset: 0.75rem;
-  }
-
-  .video-time {
-    font-size: 1.25rem;
   }
 
   .footer-section {

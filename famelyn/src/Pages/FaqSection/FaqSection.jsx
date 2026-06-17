@@ -35,7 +35,7 @@ It helps you:
 • Attract opportunities
 • Create inbound interest
 
-At Famelyn, we help founders turn their thinking into visible authority—not just content.`
+At Famelyn, we help founders turn their thinking into visible authority, not just content.`
   },
   {
     q: "I’m an emerging leader, how do I start building my personal brand?",
@@ -60,7 +60,7 @@ We help professionals at Famelyn refine their thinking into content that builds 
   },
   {
     q: "I’m a student does LinkedIn really matter for me?",
-    a: `Yes—more than ever.
+    a: `Yes, more than ever.
 
 Your LinkedIn profile is often your first impression before interviews.
 

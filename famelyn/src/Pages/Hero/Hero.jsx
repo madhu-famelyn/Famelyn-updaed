@@ -26,7 +26,7 @@ const Hero = () => {
           {/* MAIN VALUE PROP */}
           <p className="hero-subtext">
             We turn your profile into a clear, credible, and compelling reflection
-            of your value — bringing structure, strategy, and intent to how you're seen.
+            of your value, bringing structure, strategy, and intent to how you're seen.
           </p>
 
           {/* CTA BUTTON */}

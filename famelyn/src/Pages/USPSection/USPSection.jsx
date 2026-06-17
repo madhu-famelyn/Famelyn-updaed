@@ -8,7 +8,7 @@ const uspData = [
   },
   {
     title: "No Templates. No Shortcuts.",
-    desc: "Every profile, every post, every line is built from your thinking—not a copy-paste framework."
+    desc: "Every profile, every post, every line is built from your thinking, not a copy-paste framework."
   },
   {
     title: "Your Voice. Not an Agency’s Tone.",

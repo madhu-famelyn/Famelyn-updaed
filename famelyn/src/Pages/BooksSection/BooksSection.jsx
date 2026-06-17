@@ -35,7 +35,7 @@ export default function BooksSection() {
         </h2>
 
         <p className="books-subtext">
-          These books reflect the philosophy behind Famelyn — clarity,
+          These books reflect the philosophy behind Famelyn: clarity,
           positioning, and strategic presence on LinkedIn.  
           Not trends. Not hacks. Just what actually works.
         </p>
