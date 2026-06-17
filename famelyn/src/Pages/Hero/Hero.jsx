@@ -37,7 +37,7 @@ const Hero = () => {
           {/* VIDEO SECTION */}
           <div className="hero-video-section">
             <video
-              src="/founder-note.mp4"
+              src="/YASHWANTH -1 (HORI) (1) (1).mp4"
               className="hero-video-player"
               controls
               playsInline
