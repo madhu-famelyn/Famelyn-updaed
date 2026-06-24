@@ -3,6 +3,7 @@ import MainmoduleStudent from "./Pages/StudentsHero/studentmain";
 import WorkingProfessinalsMain from "./Pages/WorkingProfessional/WorkingProfessionalMain";
 import BooksSection from "./Pages/BooksSection/BooksSection";
 import TestimonialsMain from "./Pages/Testimonials/Testimonials";
+import Courses from "./Pages/Courses/Courses";
 import Mainmodule from "./Pages/main";
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/emerging-leader" element={<MainmoduleStudent />} />
         <Route path="/professionals" element={<WorkingProfessinalsMain />} />
         <Route path="/books" element={<BooksSection />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/testimonials" element={<TestimonialsMain />} />
 
       </Routes>

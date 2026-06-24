@@ -1,0 +1,15 @@
+/* WRAPPER */
+.courses-wrapper {
+  background: #001F3F; /* Navy background */
+  padding: 120px 20px 80px;
+  color: #F9F7F2; /* Ivory text */
+  font-family: 'Inter', 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+/* CONTAINER */
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}

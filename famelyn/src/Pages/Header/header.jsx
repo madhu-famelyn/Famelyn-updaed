@@ -37,6 +37,7 @@ const Header = () => {
 
         {/* NAV LINKS - Desktop */}
         <nav className="nav-links">
+          <Link to="/courses" className="nav-item">Courses</Link>
           <Link to="/books" className="nav-item">Books</Link>
           <Link to="/blogs" className="nav-item">Blogs</Link>
         </nav>
@@ -63,6 +64,9 @@ const Header = () => {
 
       {/* MOBILE SIDEBAR */}
       <nav className={`mobile-sidebar ${menuOpen ? "open" : ""}`}>
+        <Link to="/courses" className="sidebar-item" onClick={handleMenuItemClick}>
+          Courses
+        </Link>
         <Link to="/books" className="sidebar-item" onClick={handleMenuItemClick}>
           Books
         </Link>
