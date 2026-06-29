@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Courses.css";
 import Header from "../Header/header";
 import courseCover from "../../assets/linkedin_course_cover.png";
+import { API_BASE_URL } from "../../config";
 
 export default function Courses() {
   const [formData, setFormData] = useState({
@@ -91,7 +92,7 @@ export default function Courses() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/register-course", {
+      const response = await fetch(`${API_BASE_URL}/api/register-course`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

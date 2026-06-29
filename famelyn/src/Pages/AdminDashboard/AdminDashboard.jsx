@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 import Header from "../Header/header";
+import { API_BASE_URL } from "../../config";
 
 export default function AdminDashboard() {
   const [submissions, setSubmissions] = useState([]);
@@ -37,9 +38,9 @@ export default function AdminDashboard() {
     setError(null);
     try {
       const [regRes, subRes, slotsRes] = await Promise.all([
-        fetch("http://localhost:8000/api/course-registrations"),
-        fetch("http://localhost:8000/api/submissions"),
-        fetch("http://localhost:8000/api/course-slots")
+        fetch(`${API_BASE_URL}/api/course-registrations`),
+        fetch(`${API_BASE_URL}/api/submissions`),
+        fetch(`${API_BASE_URL}/api/course-slots`)
       ]);
 
       if (!regRes.ok || !subRes.ok) {
@@ -76,7 +77,7 @@ export default function AdminDashboard() {
     setSendingMeetLink(true);
     setMeetLinkResult(null);
     try {
-      const response = await fetch("http://localhost:8000/api/send-meet-link", {
+      const response = await fetch(`${API_BASE_URL}/api/send-meet-link`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -99,8 +100,8 @@ export default function AdminDashboard() {
   const handleDelete = async (id, type) => {
     setDeletingId(id);
     const endpoint = type === "course_registrations"
-      ? `http://localhost:8000/api/course-registrations/${id}`
-      : `http://localhost:8000/api/submissions/${id}`;
+      ? `${API_BASE_URL}/api/course-registrations/${id}`
+      : `${API_BASE_URL}/api/submissions/${id}`;
 
     try {
       const response = await fetch(endpoint, { method: "DELETE" });

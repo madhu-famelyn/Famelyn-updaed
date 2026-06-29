@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./StudentsHero.css";
+import { API_BASE_URL } from "../../config";
 
 const StudentsHero = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -20,7 +21,7 @@ const StudentsHero = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/contact", {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {

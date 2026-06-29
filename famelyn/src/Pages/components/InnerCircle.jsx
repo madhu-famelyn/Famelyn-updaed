@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import './InnerCircle.css';
 import FaqSection from '../FaqSection/FaqSection';
+import { API_BASE_URL } from "../../config";
 
 export function InnerCircle() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -35,7 +36,7 @@ export function InnerCircle() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/contact", {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {

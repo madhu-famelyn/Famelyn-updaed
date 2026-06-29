@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HeroSection.css";
+import { API_BASE_URL } from "../../../config";
 
 export default function ExecutiveHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function ExecutiveHero() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/contact", {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {
