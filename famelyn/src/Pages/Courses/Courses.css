@@ -1,7 +1,7 @@
 /* WRAPPER */
 .courses-wrapper {
   background: #001F3F; /* Navy background */
-  padding: 120px 20px 80px;
+  padding: 80px 20px 60px;
   color: #F9F7F2; /* Ivory text */
   font-family: 'Inter', 'Poppins', sans-serif;
   min-height: 100vh;
@@ -11,5 +11,593 @@
 .courses-container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* HERO SECTION */
+.courses-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.courses-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #C5A059; /* Gold */
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.courses-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, #F9F7F2 30%, #D4B896 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.courses-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: #a4b3c6;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* MAIN COURSE CARD */
+.course-card {
+  display: flex;
+  background: rgba(11, 28, 44, 0.6); /* Glassmorphism background */
+  border: 1px solid rgba(232, 220, 200, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(197, 160, 89, 0.35);
+  box-shadow: 0 30px 60px rgba(197, 160, 89, 0.06), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* CENTERED COURSE CARD */
+.course-card-centered {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(11, 28, 44, 0.6); /* Glassmorphism background */
+  border: 1px solid rgba(232, 220, 200, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.course-card-centered:hover {
+  transform: translateY(-5px);
+  border-color: rgba(197, 160, 89, 0.35);
+  box-shadow: 0 30px 60px rgba(197, 160, 89, 0.06), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.course-card-header {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+
+.course-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.course-card-centered:hover .course-cover-img {
+  transform: scale(1.04);
+}
+
+.course-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 30%, rgba(11, 28, 44, 0.95) 100%);
+}
+
+.course-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-header-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.duration-tag, .spots-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.duration-tag {
+  background: #aa3bff;
+  color: #fff;
+}
+
+.spots-tag {
+  background: rgba(197, 160, 89, 0.1);
+  color: #D4B896;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+}
+
+.course-name {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+  color: #F9F7F2;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.course-tagline {
+  font-size: 0.95rem;
+  color: #C5A059;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.course-desc {
+  font-size: 0.9rem;
+  color: #b0c2d6;
+  line-height: 1.5;
+  margin: 0 0 25px 0;
+}
+
+.curriculum-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #F9F7F2;
+  border-bottom: 1px solid rgba(249, 247, 242, 0.1);
+  padding-bottom: 10px;
+  margin: 0 0 15px 0;
+}
+
+/* Highlights */
+.course-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.course-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.bullet-icon {
+  color: #C5A059;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.course-highlights li span {
+  font-size: 0.85rem;
+  color: #a4b3c6;
+  line-height: 1.4;
+}
+
+.course-highlights li span strong {
+  color: #F9F7F2;
+}
+
+/* Footer Info */
+.course-footer-info {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.info-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #b0c2d6;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* BUTTON */
+.enroll-btn-full {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #aa3bff 0%, #7a1fcf 100%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(170, 59, 255, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.enroll-btn-full:hover {
+  background: linear-gradient(135deg, #b854ff 0%, #892be3 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(170, 59, 255, 0.35);
+}
+
+.btn-arrow {
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.enroll-btn-full:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .courses-wrapper {
+    padding: 100px 15px 50px;
+  }
+  
+  .course-card-body {
+    padding: 25px;
+  }
+}
+
+/* COURSE DETAILS SECTION */
+.course-details-section {
+  border-bottom: 1px solid rgba(232, 220, 200, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.course-main-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #F9F7F2;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.course-main-tagline {
+  font-size: 0.95rem;
+  color: #C5A059;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.course-main-text {
+  font-size: 0.88rem;
+  color: #b0c2d6;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+.duration-info {
+  font-size: 0.9rem;
+  color: #F9F7F2;
+}
+
+.duration-label {
+  color: #C5A059;
+}
+
+/* FORM STYLE */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-info-msg {
+  font-size: 0.82rem;
+  color: #8da4be;
+  margin: 0 0 5px 0;
+  font-style: italic;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #F9F7F2;
+}
+
+.required {
+  color: #C5A059;
+  margin-left: 2px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+  background: rgba(11, 28, 44, 0.5);
+  border: 1px solid rgba(232, 220, 200, 0.15);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #F9F7F2;
+  font-family: inherit;
+  font-size: 0.88rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #C5A059;
+  box-shadow: 0 0 8px rgba(197, 160, 89, 0.2);
+}
+
+.form-group select option {
+  background: #0b1c2c;
+  color: #F9F7F2;
+}
+
+.radio-options,
+.checkbox-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: #b0c2d6;
+  user-select: none;
+  text-align: left;
+}
+
+.radio-label input,
+.checkbox-label input {
+  accent-color: #C5A059;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.radio-label span,
+.checkbox-label span {
+  line-height: 1.3;
+}
+
+.form-error-msg {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  color: #ff6b6b;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
   text-align: center;
 }
+
+/* SUCCESS VIEWS */
+.registration-success {
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(197, 160, 89, 0.1);
+  border: 2px solid #C5A059;
+  color: #C5A059;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.registration-success h3 {
+  font-size: 1.3rem;
+  color: #F9F7F2;
+  margin: 0 0 10px 0;
+}
+
+.registration-success p {
+  font-size: 0.88rem;
+  color: #b0c2d6;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.selected-slot-summary {
+  background: rgba(197, 160, 89, 0.08);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  color: #D4B896;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+/* Back button & Fade-in styles */
+.back-to-details-btn {
+  background: transparent;
+  border: none;
+  color: #C5A059;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.back-to-details-btn:hover {
+  color: #F9F7F2;
+}
+
+.form-container-fade-in {
+  animation: formFadeIn 0.4s ease forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes formFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.course-details-section-view {
+  text-align: left;
+}
+
+/* Custom Slot Option Cards */
+.slot-option-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(232, 220, 200, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.slot-option-card:hover {
+  border-color: rgba(197, 160, 89, 0.5);
+  background: rgba(197, 160, 89, 0.03);
+}
+
+.slot-option-card.selected {
+  border-color: #C5A059;
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.slot-check-circle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(232, 220, 200, 0.4);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.slot-option-card.selected .slot-check-circle {
+  border-color: #C5A059;
+  background: #C5A059;
+}
+
+.slot-option-card.selected .slot-check-circle::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 4px;
+  height: 4px;
+  background: #001F3F;
+  border-radius: 50%;
+}
+
+.slot-option-card span {
+  font-size: 0.82rem;
+  color: #b0c2d6;
+  line-height: 1.3;
+}
+
+.slot-option-card.selected span {
+  color: #F9F7F2;
+  font-weight: 600;
+}
+
+/* Other Goal Input Text Field */
+.other-goal-input {
+  background: rgba(11, 28, 44, 0.6);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #F9F7F2;
+  font-family: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+  animation: formFadeIn 0.3s ease forwards;
+}
+
+.other-goal-input:focus {
+  border-color: #C5A059;
+  box-shadow: 0 0 6px rgba(197, 160, 89, 0.25);
+}
+
+
+

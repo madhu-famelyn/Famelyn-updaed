@@ -11,13 +11,22 @@ export default function ExecutiveHero() {
     setLoading(true);
 
     const form = e.target;
-    const data = new FormData(form);
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone") || "",
+      linkedin: formData.get("linkedin") || "",
+      message: formData.get("message"),
+      submission_type: "executive_audit",
+    };
 
     try {
-      const response = await fetch("https://formspree.io/f/xanjlkyz", {
+      const response = await fetch("http://localhost:8000/api/contact", {
         method: "POST",
-        body: data,
+        body: JSON.stringify(payload),
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
       });

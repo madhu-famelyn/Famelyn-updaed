@@ -5,6 +5,8 @@ import FaqSection from '../FaqSection/FaqSection';
 export function InnerCircle() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handlePlayAudio = () => {
     if (audioRef.current) {
@@ -15,6 +17,43 @@ export function InnerCircle() {
       }
       setIsPlaying(!isPlaying);
     }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone") || "",
+      linkedin: formData.get("linkedin") || "",
+      message: formData.get("message"),
+      submission_type: "inner_circle",
+    };
+
+    try {
+      const response = await fetch("http://localhost:8000/api/contact", {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Network error. Please try again.");
+    }
+    setLoading(false);
   };
 
   return (
@@ -56,69 +95,77 @@ export function InnerCircle() {
             </div>
 
             <div className="right-section">
-              <form
-                className="intake-form contact-form"
-                action="https://formspree.io/f/xanjlkyz"
-                method="POST"
-              >
-                <input type="text" name="_honey" style={{ display: 'none' }} />
-                <input type="hidden" name="_captcha" value="false" />
+              {!submitted ? (
+                <form
+                  className="intake-form contact-form"
+                  onSubmit={handleSubmit}
+                >
+                  <input type="text" name="_honey" style={{ display: 'none' }} />
+                  <input type="hidden" name="_captcha" value="false" />
 
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">NAME</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="form-input"
-                    required
-                  />
+                  <div className="form-group">
+                    <label htmlFor="name" className="form-label">NAME</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="form-input"
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email" className="form-label">EMAIL</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="form-input"
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone" className="form-label">PHONE NUMBER</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="form-input"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="linkedin" className="form-label">LINKEDIN URL</label>
+                    <input
+                      type="url"
+                      id="linkedin"
+                      name="linkedin"
+                      className="form-input"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="message" className="form-label">MESSAGE</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      className="form-input"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="submit-button cta-button" disabled={loading}>
+                    {loading ? 'Sending...' : 'Send Message'}
+                  </button>
+                </form>
+              ) : (
+                <div className="submission-success">
+                  <h2 style={{ color: '#fff', marginBottom: '1rem' }}>Thank You!</h2>
+                  <p style={{ color: '#ccc' }}>Your request to access the Inner Circle has been received. We will get back to you shortly.</p>
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">EMAIL</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="form-input"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phone" className="form-label">PHONE NUMBER</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="form-input"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="linkedin" className="form-label">LINKEDIN URL</label>
-                  <input
-                    type="url"
-                    id="linkedin"
-                    name="linkedin"
-                    className="form-input"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message" className="form-label">MESSAGE</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    className="form-input"
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" className="submit-button cta-button">Send Message</button>
-              </form>
+              )}
             </div>
           </div>
         </div>
@@ -151,6 +198,22 @@ export function InnerCircle() {
             <a href="/professionals">Professionals</a>
             <a href="https://www.linkedin.com/company/famelyn">LinkedIn</a>
             <a href="https://www.instagram.com/famelyn_/">Instagram</a>
+            <a
+              href="/admin/login"
+              style={{
+                background: "rgba(197, 160, 89, 0.12)",
+                border: "1px solid rgba(197, 160, 89, 0.4)",
+                color: "#C5A059",
+                padding: "5px 12px",
+                borderRadius: "6px",
+                fontWeight: "700",
+                fontSize: "0.78rem",
+                letterSpacing: "1px",
+                textTransform: "uppercase"
+              }}
+            >
+              ⚙ Admin
+            </a>
           </nav>
         </div>
       </section>

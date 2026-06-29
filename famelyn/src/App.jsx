@@ -4,6 +4,8 @@ import WorkingProfessinalsMain from "./Pages/WorkingProfessional/WorkingProfessi
 import BooksSection from "./Pages/BooksSection/BooksSection";
 import TestimonialsMain from "./Pages/Testimonials/Testimonials";
 import Courses from "./Pages/Courses/Courses";
+import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
+import AdminLogin from "./Pages/AdminDashboard/AdminLogin";
 import Mainmodule from "./Pages/main";
 import "./App.css";
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/books" element={<BooksSection />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/testimonials" element={<TestimonialsMain />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminDashboard />} />
 
       </Routes>
     </Router>
