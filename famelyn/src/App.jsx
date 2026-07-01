@@ -7,6 +7,7 @@ import Courses from "./Pages/Courses/Courses";
 import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
 import AdminLogin from "./Pages/AdminDashboard/AdminLogin";
 import Mainmodule from "./Pages/main";
+import BlogSection from "./Pages/BlogSection/BlogSection";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/books" element={<BooksSection />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/testimonials" element={<TestimonialsMain />} />
+        <Route path="/blogs" element={<BlogSection />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminDashboard />} />
 
