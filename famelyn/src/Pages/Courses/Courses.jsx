@@ -156,7 +156,7 @@ function CourseCardItem({ course }) {
             <h3>Registration Successful!</h3>
             <p>Your seat has been reserved. A confirmation email has been sent to <strong>{formData.email}</strong> with your selected slot details.</p>
             <div className="selected-slot-summary">
-              <strong>Selected Session:</strong> {formData.selected_slot}
+              <strong>Selected Session(s):</strong> {selectedSlots.join(", ") || formData.selected_slot}
             </div>
           </div>
         ) : (

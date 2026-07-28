@@ -278,7 +278,7 @@ export default function AdminDashboard() {
           (typeFilter === "inperson" && !slot.includes("online"));
 
         // Date filter matches
-        const matchesDate = dateFilter === "all" || item.selected_slot === dateFilter;
+        const matchesDate = dateFilter === "all" || item.selected_slot.includes(dateFilter);
 
         return matchesSearch && matchesCourse && matchesType && matchesDate;
       });
@@ -301,7 +301,7 @@ export default function AdminDashboard() {
   const onlineCountForSelected = registrations.filter(r => {
     const slot = r.selected_slot;
     const matchesType = typeFilter === "online" ? slot.toLowerCase().includes("online") : true;
-    const matchesDate = dateFilter !== "all" ? slot === dateFilter : true;
+    const matchesDate = dateFilter !== "all" ? slot.includes(dateFilter) : true;
     return matchesType && matchesDate;
   }).length;
 
