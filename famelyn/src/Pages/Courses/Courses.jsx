@@ -19,6 +19,7 @@ function CourseCardItem({ course }) {
     linkedin_goals: ""
   });
 
+  const [selectedSlots, setSelectedSlots] = useState([]);
   const [selectedGoals, setSelectedGoals] = useState([]);
   const [otherGoalText, setOtherGoalText] = useState("");
 
@@ -36,10 +37,13 @@ function CourseCardItem({ course }) {
   };
 
   const handleSlotClick = (slotValue) => {
-    setFormData((prev) => ({
-      ...prev,
-      selected_slot: prev.selected_slot === slotValue ? "" : slotValue
-    }));
+    setSelectedSlots((prev) => {
+      if (prev.includes(slotValue)) {
+        return prev.filter((s) => s !== slotValue);
+      } else {
+        return [...prev, slotValue];
+      }
+    });
   };
 
   const handleGoalChange = (goal) => {
@@ -71,6 +75,7 @@ function CourseCardItem({ course }) {
 
     const submissionPayload = {
       ...formData,
+      selected_slot: selectedSlots.join(", "),
       linkedin_goals: linkedinGoalsString
     };
 
@@ -81,13 +86,13 @@ function CourseCardItem({ course }) {
       !submissionPayload.email ||
       !submissionPayload.company_name ||
       !submissionPayload.designation ||
-      !submissionPayload.selected_slot ||
+      selectedSlots.length === 0 ||
       !submissionPayload.attendance_reason ||
       !submissionPayload.linkedin_challenge ||
       !submissionPayload.linkedin_activity_level ||
       !submissionPayload.linkedin_goals
     ) {
-      setError("Please fill out all required fields.");
+      setError("Please fill out all required fields (including at least one Date & Time slot).");
       setLoading(false);
       return;
     }
@@ -229,16 +234,17 @@ function CourseCardItem({ course }) {
               </div>
 
               <div className="form-group">
-                <label>Select Date & Time <span className="required">*</span></label>
+                <label>Select Date & Time <span className="required">*</span> <span style={{ fontSize: "0.75rem", fontWeight: "normal", color: "#8a9eb5", marginLeft: "6px" }}>(Select one or multiple)</span></label>
                 <div className="radio-options">
                   {course.timings && course.timings.length > 0 ? (
                     course.timings.map((t, idx) => {
                       const slotValue = typeof t === "string" ? t : t.slot;
                       const isOnline = typeof t === "string" ? t.toLowerCase().includes("online") : t.type === "online";
+                      const isSelected = selectedSlots.includes(slotValue);
                       return (
                         <div
                           key={idx}
-                          className={`slot-option-card ${formData.selected_slot === slotValue ? "selected" : ""}`}
+                          className={`slot-option-card ${isSelected ? "selected" : ""}`}
                           onClick={() => handleSlotClick(slotValue)}
                         >
                           <div className="slot-check-circle"></div>
@@ -376,8 +382,11 @@ export default function Courses() {
                 description: "Join us for an exclusive LinkedIn Personal Branding Session designed to help professionals build a strong professional presence, increase visibility, and unlock new career and business opportunities.",
                 duration: "1 Hour",
                 timings: [
-                  { slot: "1st July | 3:00 PM | Gowra Deccan.", type: "inperson" },
-                  { slot: "4th July | 11:00 AM | Online Session", type: "online" }
+                  { slot: "1st August | 11:00 AM - 12:00 PM | Online Session", type: "online" },
+                  { slot: "8th August | 11:00 AM - 12:00 PM | Online Session", type: "online" },
+                  { slot: "15th August | 11:00 AM - 12:00 PM | Online Session", type: "online" },
+                  { slot: "22nd August | 11:00 AM - 12:00 PM | Online Session", type: "online" },
+                  { slot: "29th August | 11:00 AM - 12:00 PM | Online Session", type: "online" }
                 ]
               }}
             />
